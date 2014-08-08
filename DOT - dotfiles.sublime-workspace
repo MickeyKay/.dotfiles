@@ -1,0 +1,366 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "script/bootstrap",
+			"settings":
+			{
+				"buffer_size": 2971,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "micktastic/aliases.zsh",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "# Directories"
+			}
+		},
+		{
+			"file": "micktastic/globals.zsh",
+			"settings":
+			{
+				"buffer_size": 69,
+				"line_ending": "Unix",
+				"name": "# your project folder that we can `c [tab]` to"
+			}
+		},
+		{
+			"contents": "#\n# Functions\n#\n\n# Open hosts file\nhosts() {\n	sudo nano -e /private/etc/hosts\n}\n\n# Flush DNS\nflush() {\n	sudo killall -HUP mDNSResponder\n}\n\n# Show hidden files\nshowFiles() {\n	defaults write com.apple.finder AppleShowAllFiles TRUE\n	killall	Finder\n}\n\n# Hide hidden files\nhideFiles() {\n	defaults write com.apple.finder AppleShowAllFiles FALSE\n	killall Finder\n}\n\n# Toggle hidden files visiblity\ntoggleFiles() {\n\n	# Check if hidden files are visible and store result in a variable\n	isVisible=$(defaults read com.apple.finder AppleShowAllFiles)\n\n	# Toggle visibility based on variables value\n	if [ $isVisible = FALSE ]\n	then\n		showFiles\n	else\n		hideFiles\n	fi\n\n}",
+			"file": "micktastic/functions.zsh",
+			"file_size": 654,
+			"file_write_time": 1407483303000000,
+			"settings":
+			{
+				"buffer_size": 654,
+				"line_ending": "Unix",
+				"name": "# Commands"
+			}
+		},
+		{
+			"file": "micktastic/git/aliases.zsh",
+			"settings":
+			{
+				"buffer_size": 53,
+				"line_ending": "Unix",
+				"name": "#"
+			}
+		},
+		{
+			"file": "micktastic/directories/aliases.zsh",
+			"settings":
+			{
+				"buffer_size": 91,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/mickey/.dotfiles/micktastic/directories/functions copy.zsh",
+		"/Users/mickey/.dotfiles/micktastic/git/functions.zsh",
+		"/Users/mickey/.dotfiles/git/gitconfig.symlink",
+		"/Users/mickey/.dotfiles/bin/git-nuke",
+		"/Users/mickey/.dotfiles/git/completion.zsh",
+		"/Users/mickey/.dotfiles/system/_path.zsh",
+		"/Users/mickey/.dotfiles/zsh/aliases.zsh",
+		"/Users/mickey/.dotfiles/system/keys.zsh",
+		"/Users/mickey/.dotfiles/system/env.zsh",
+		"/Users/mickey/.dotfiles/system/aliases.zsh",
+		"/Users/mickey/.dotfiles/homebrew/install.sh",
+		"/Users/mickey/.dotfiles/zsh/zshrc.symlink",
+		"/Users/mickey/.dotfiles/bin/movieme",
+		"/Users/mickey/.dotfiles/bin/todo"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"install"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "script/bootstrap",
+					"settings":
+					{
+						"buffer_size": 2971,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								169,
+								173
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "micktastic/aliases.zsh",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# Directories",
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "micktastic/globals.zsh",
+					"settings":
+					{
+						"buffer_size": 69,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								48,
+								48
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# your project folder that we can `c [tab]` to",
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "micktastic/functions.zsh",
+					"settings":
+					{
+						"buffer_size": 654,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								543,
+								543
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# Commands",
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "micktastic/git/aliases.zsh",
+					"settings":
+					{
+						"buffer_size": 53,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								51,
+								30
+							]
+						],
+						"settings":
+						{
+							"auto_name": "#",
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "micktastic/directories/aliases.zsh",
+					"settings":
+					{
+						"buffer_size": 91,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								91,
+								91
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 264.0,
+	"status_bar_visible": true
+}
