@@ -1,4 +1,9 @@
-# holman does dotfiles
+# (Mickey's Take on. . .) holman does dotfiles
+
+## before going futher. . .
+Before just installing and running all these goodies, make sure you've done the following:
+* Install XCode (at least the command line tools)
+* Anything else?
 
 ## dotfiles
 
