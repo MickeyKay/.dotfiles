@@ -3,6 +3,7 @@
 ## before going futher. . .
 Before just installing and running all these goodies, make sure you've done the following:
 * Install XCode (at least the command line tools)
+* Install zsh
 * Anything else?
 
 ## dotfiles
