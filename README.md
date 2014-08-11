@@ -2,16 +2,16 @@
 
 ## before going futher. . .
 Before just installing and running all these goodies, make sure you've done the following:
-* Install XCode (at least the command line tools)
+* Install XCode command line tools
+* Install Homebrew [tut](https://github.com/Homebrew/homebrew/wiki/Installation)
 * Install zsh
-* install git-completions via Homebrew ([tut](https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion))
-```
-brew install git bash-completion
-```
 * Anything else?
 
 __Installation Note!__
 Make sure to use a recursive `clone` to get any and all submodules (e.g. Gary Jone's gitflow deploy script).
+
+__ Another Note__
+Run `dot` (inside `/bin`) every now and then to update all the goodies.
 
 ## installation
 Run this:
