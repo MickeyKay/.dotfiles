@@ -6,11 +6,12 @@
 # As per various smart people's suggestions, use Homebrew
 # to get more up-to-date versions of all these goodies.
 
-# Git (via Homebrew)
+#
+# Homebrew Installs
+# 
 brew install git
-
-# ZSH (via Homebrew)
 brew install zsh
+brew install python
 
 #
 # Varying Vagrant Vagrants
@@ -25,9 +26,9 @@ echo 'Done installing VVV plugins.'
 
 # Install Vagrant
 echo 'Installing VVV.'
-if [ ! -d ~/vagrant-local ]
+if [ ! -d $VAGRANT ]
 then
-    git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git ~/vagrant-local
+    git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git $VAGRANT
 else
     echo 'VVV is already installed.'
 fi
@@ -42,3 +43,14 @@ else
 	echo 'Vagrant Site Wizard is already installed.'
 fi
 echo 'Done installing Vagrant Site Wizard.'
+
+# Install VVV Dashboar
+echo 'Installing VVV Dashboard.'
+if [ ! -d $VAGRANT/vvv-site-wizard ]
+then
+	git clone https://github.com/aliso/vvv-site-wizard.git $VAGRANT/vvv-site-wizard
+else
+	echo 'VVV Dashboard is already installed.'
+fi
+echo 'Done installing VVV Dashboard.'
+
