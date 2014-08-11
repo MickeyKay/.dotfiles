@@ -2,6 +2,11 @@
 # Git Functions
 #
 
+# Update README.md commit
+gcrd() {
+	git commit -am "Update README.md."
+}
+
 # Add remote git repo and set 'origin' to it
 mkrepo() {
 
