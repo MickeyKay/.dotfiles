@@ -8,7 +8,7 @@ Here is an overview of all the installation to-do list when setting up a new mac
 1. Install Virtual Box (used by VVV).  
 	[https://www.virtualbox.org/wiki/Downloads]
 
-	__BEFORE INSTALLING DOTFILES__
+	__Pre-Dotfiles__
 	---
 
 1. Install these dotfiles.  

@@ -7,7 +7,7 @@
 #
 
 # VVV (www folder)
-vvv() {
+vloc() {
 	cd $SITES/vagrant-local/www
 }
 
