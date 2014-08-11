@@ -3,7 +3,7 @@
 ## General Installation Overview
 Here is an overview of all the installation to-do list when setting up a new machine:
 
-1. Install XCode Command Line Tools - this should come before just about anything else!
+1. Install XCode Command Line Tools - this should come before just about anything else!  
 	```
 	xcode-select --install
 	```
