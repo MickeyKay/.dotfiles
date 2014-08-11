@@ -7,27 +7,25 @@
 #
 
 # VVV (www folder)
-vloc() {
-	cd $SITES/vagrant-local/www
+vag() {
+	cd $VAGRANT/www
 }
-
-alias iii="$SITES/vagrant-local/www"
 
 # WordPress Default
 vvvd() {
-	vvv
+	vag
 	cd wordpress-default
 }
 
 # WordPress Trunk
 vvvt() {
-	vvv
+	vag
 	cd wordpress-trunk
 }
 
 # WordPress Dev
 vvvv() {
-	vvv
+	vag
 	cd wordpress-develop
 }
 
