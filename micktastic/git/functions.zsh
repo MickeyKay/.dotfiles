@@ -5,6 +5,7 @@
 # Update README.md commit
 readme() {
 	git commit -am "Update README.md."
+	git push
 }
 
 # Add remote git repo and set 'origin' to it
