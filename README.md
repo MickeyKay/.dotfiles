@@ -19,7 +19,7 @@ Before just installing and running all these dotfile goodies, make sure you've d
 __Installation Note!__  
 Make sure to use a recursive `clone` to get any and all submodules (e.g. Gary Jone's gitflow deploy script).
 
-__ Another Note__  
+__Another Note__  
 Run `dot` (inside `/bin`) every now and then to update all the goodies.
 
 ## Installation
