@@ -16,10 +16,10 @@ https://github.com/GaryJones/wordpress-plugin-git-flow-svn-deploy
 Before just installing and running all these dotfile goodies, make sure you've done the following:
 * Install XCode command line tools.
 
-__Installation Note!__
+__Installation Note!__  
 Make sure to use a recursive `clone` to get any and all submodules (e.g. Gary Jone's gitflow deploy script).
 
-__ Another Note__
+__ Another Note__  
 Run `dot` (inside `/bin`) every now and then to update all the goodies.
 
 ## Installation
