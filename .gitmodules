@@ -1,0 +1,3 @@
+[submodule "micktastic/git/wordpress-plugin-git-flow-svn-deploy"]
+	path = micktastic/git/wordpress-plugin-git-flow-svn-deploy
+	url = https://github.com/GaryJones/wordpress-plugin-git-flow-svn-deploy.git

@@ -5,6 +5,12 @@ Before just installing and running all these goodies, make sure you've done the 
 * Install XCode (at least the command line tools)
 * Anything else?
 
+## installation
+Make sure to use a recursive `clone` to get any and all submodules (e.g. Gary Jone's gitflow deploy script):
+```
+git clone --recursive https://github.com/MickeyKay/dotfiles.git
+```
+
 ## dotfiles
 
 Your dotfiles are how you personalize your system. These are mine.

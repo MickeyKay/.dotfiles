@@ -11,6 +11,8 @@ vvv() {
 	cd $SITES/vagrant-local/www
 }
 
+alias iii="$SITES/vagrant-local/www"
+
 # WordPress Default
 vvvd() {
 	vvv
@@ -28,3 +30,10 @@ vvvv() {
 	vvv
 	cd wordpress-develop
 }
+
+# Plugins
+plugs() {
+	vvvt
+	cd wp-content/plugins
+}
+

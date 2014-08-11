@@ -58,7 +58,15 @@
 			"file": "micktastic/directories/aliases.zsh",
 			"settings":
 			{
-				"buffer_size": 91,
+				"buffer_size": 131,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 3812,
 				"line_ending": "Unix"
 			}
 		}
@@ -136,7 +144,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -281,20 +289,46 @@
 					"file": "micktastic/directories/aliases.zsh",
 					"settings":
 					{
-						"buffer_size": 91,
+						"buffer_size": 131,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								91,
-								91
+								131,
+								131
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "README.md",
+					"settings":
+					{
+						"buffer_size": 3812,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								24,
+								24
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -346,16 +380,24 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"read",
+				"README.md"
+			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/Users/mickey/Sites/vagrant-local/www/wordpress-default/VVV - WP Default.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"show_minimap": true,
 	"show_open_files": false,
