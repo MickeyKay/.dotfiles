@@ -5,10 +5,10 @@ Here is an overview of all the installation to-do list when setting up a new mac
 
 1. Install XCode Command Line Tools - this should come before just about anything else! [`xcode-select --install`]
 1. Install these dotfiles [[instructions below](https://github.com/MickeyKay/dotfiles#installation)]
-1. Add GaryJ's deploy script to each dev install's plugins folder, or figure out a way to have this execute from one place. [https://github.com/GaryJones/wordpress-plugin-git-flow-svn-deploy]
 1. Install VVV [https://github.com/Varying-Vagrant-Vagrants/VVV]. Make sure Homebrew is installed first - this should happen when installing the dotfiles and running `script/bootstrap`.
 1. Install some VVV goodies:
 	- VVV Site Wizard [https://github.com/aliso/vvv-site-wizard]
+1. Add GaryJ's deploy script to each dev install's plugins folder, or figure out a way to have this execute from one place. [https://github.com/GaryJones/wordpress-plugin-git-flow-svn-deploy]
 1. Run `dot` every now and then to update dotfile dependencies.
 
 ## Before Going Further. . .
