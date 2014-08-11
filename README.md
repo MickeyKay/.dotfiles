@@ -8,7 +8,8 @@ Here is an overview of all the installation to-do list when setting up a new mac
 	xcode-select --install
 	```
 1. Install these dotfiles (see specific installation instructions below)
-1. Add GaryJ's deploy script to your plugin folder. (https://github.com/GaryJones/wordpress-plugin-git-flow-svn-deploy)
+1. Add GaryJ's deploy script to each dev install's plugins folder (or figure out a way to have this execute from one place)  
+https://github.com/GaryJones/wordpress-plugin-git-flow-svn-deploy
 1. Keep in mind you should run `dot` every now and then to update dotfile dependencies.
 
 ## Before Going Further. . .
