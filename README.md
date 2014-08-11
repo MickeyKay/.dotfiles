@@ -5,6 +5,12 @@ Here is an overview of all the installation to-do list when setting up a new mac
 
 1. Install XCode Command Line Tools - this should come before just about anything else!  
 	[`xcode-select --install`]
+1. Install Virtual Box (used by VVV).  
+	[https://www.virtualbox.org/wiki/Downloads]
+
+	__BEFORE INSTALLING DOTFILES__
+	---
+
 1. Install these dotfiles.  
 	[[instructions below](https://github.com/MickeyKay/dotfiles#installation)]
 1. Install VVV. Make sure Homebrew is installed first - this should happen when installing the dotfiles and running `script/bootstrap`.  
