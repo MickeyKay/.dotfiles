@@ -11,13 +11,8 @@ Here is an overview of all the installation to-do list when setting up a new mac
 	#### Pre-Dotfiles
 	---
 
-1. Install these dotfiles.  
+1. Install these dotfiles (/micktastic/installation/install.sh should install some goodies when this happens).  
 	[[instructions below](https://github.com/MickeyKay/dotfiles#installation)]
-1. Install VVV. Make sure Homebrew is installed first - this should happen when installing the dotfiles and running `script/bootstrap`.  
-	[https://github.com/Varying-Vagrant-Vagrants/VVV]
-1. Install some VVV goodies:
-	- VVV Site Wizard  
-		[https://github.com/aliso/vvv-site-wizard]
 1. Add GaryJ's deploy script to each dev install's plugins folder, or figure out a way to have this execute from one place.  
 	[https://github.com/GaryJones/wordpress-plugin-git-flow-svn-deploy]
 1. Run `dot` every now and then to update dotfile dependencies.
@@ -64,6 +59,11 @@ symlinked without extension into `$HOME` when you run `script/bootstrap`.
 
 There's a few special files in the hierarchy.
 
+### Mickey's Custom Stuff
+It all lives under **micktastic/**:
+- **installation/install.sh**: installs a bunch of good stuff (VVV, updated Git/ZSH, etc).
+
+### Holman's Original Stuff
 - **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
   available everywhere.
 - **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
