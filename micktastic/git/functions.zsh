@@ -3,7 +3,7 @@
 #
 
 # Update README.md commit
-gcrd() {
+readme() {
 	git commit -am "Update README.md."
 }
 
@@ -31,11 +31,27 @@ mkrepo() {
 
 # Pull all remote Git branches
 updateAllBranches() {
-	git config --global push.default tracking
-	git branch -a | grep -v HEAD | perl -ne 'chomp($_); s|^\*?\s*||; if (m|(.+)/(.+)| && not $d{$2}) {print qq(git branch --track $2 $1/$2\n)} else {$d{$_}=1}' | csh -xfs
+	for remote in `git branch -r | grep -v master `; do git checkout --track $remote ; done
 }
 
 # Update all submodules (including nested)
 updateAllSubs() {
 	git submodule update --init --recursive
+}
+
+# Delete local and remote branch (Format: delb <branch-name>)
+delb() {
+
+	# Get branch name from input after 'delb'
+	branch=$1
+
+	# Get remote name
+	remote=`git remote`
+
+	# Delete local branch
+	git branch -d $branch
+
+	# Delete remote branch
+	git push $remote :$branch
+
 }

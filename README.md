@@ -4,6 +4,8 @@
 Before just installing and running all these goodies, make sure you've done the following:
 * Install XCode (at least the command line tools)
 * Install zsh
+* install git-completions via Homebrew ([tut](https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion))
+```brew install git bash-completion```
 * Anything else?
 
 __Installation Note!__
