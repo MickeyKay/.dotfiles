@@ -9,6 +9,7 @@ Here is an overview of all the installation to-do list when setting up a new mac
 	[https://www.virtualbox.org/wiki/Downloads]
 
 	### Pre-Dotfiles
+	---
 
 1. Install these dotfiles.  
 	[[instructions below](https://github.com/MickeyKay/dotfiles#installation)]
