@@ -1,11 +1,18 @@
-# holman (and Mickey) do dotfiles
+# Mickey's take on Holmand's dotfiles
 
-## before going futher. . .
-Before just installing and running all these goodies, make sure you've done the following:
-* Install XCode command line tools
-* Install Homebrew [tut](https://github.com/Homebrew/homebrew/wiki/Installation)
-* Install zsh
-* Anything else?
+## General Installation Overview
+Here is an overview of all the installation to-do list when setting up a new machine:
+1. Install XCode Command Line Tools - this should come before just about anything else!
+	```
+	xcode-select --install
+	```
+1. Install these dotfiles (see specific installation instructions below)
+1. Add GaryJ's deploy script to your plugin folder. (https://github.com/GaryJones/wordpress-plugin-git-flow-svn-deploy)
+1. Keep in mind you should run `dot` every now and then to update dotfile dependencies.
+
+## Before Going Further. . .
+Before just installing and running all these dotfile goodies, make sure you've done the following:
+* Install XCode command line tools.
 
 __Installation Note!__
 Make sure to use a recursive `clone` to get any and all submodules (e.g. Gary Jone's gitflow deploy script).
@@ -13,7 +20,7 @@ Make sure to use a recursive `clone` to get any and all submodules (e.g. Gary Jo
 __ Another Note__
 Run `dot` (inside `/bin`) every now and then to update all the goodies.
 
-## installation
+## Installation
 Run this:
 
 ```
@@ -33,7 +40,7 @@ defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
-## topical
+## Topical
 
 Everything's built around topic areas. If you're adding a new area to your
 forked dotfiles — say, "Java" — you can simply add a `java` directory and put
@@ -41,14 +48,7 @@ files in there. Anything with an extension of `.zsh` will get automatically
 included into your shell. Anything with an extension of `.symlink` will get
 symlinked without extension into `$HOME` when you run `script/bootstrap`.
 
-## what's inside
-
-A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
-above and see what components may mesh up with you.
-[Fork it](https://github.com/holman/dotfiles/fork), remove what you don't
-use, and build on what you do use.
-
-## components
+## Components
 
 There's a few special files in the hierarchy.
 
@@ -65,18 +65,8 @@ There's a few special files in the hierarchy.
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `script/bootstrap`.
 
-## bugs
 
-I want this to work for everyone; that means when you clone it down it should
-work for you even though you may not have `rbenv` installed, for example. That
-said, I do use this as *my* dotfiles, so there's a good chance I may break
-something if I forget to make a check for a dependency.
-
-If you're brand-new to the project and run into any blockers, please
-[open an issue](https://github.com/holman/dotfiles/issues) on this repository
-and I'd love to get it fixed for you!
-
-## thanks
+## (Holman's) Credits
 
 I forked [Ryan Bates](http://github.com/ryanb)' excellent
 [dotfiles](http://github.com/ryanb/dotfiles) for a couple years before the
@@ -85,7 +75,7 @@ dotfiles were an easy way to get into bash customization, and then to jump ship
 to zsh a bit later. A decent amount of the code in these dotfiles stem or are
 inspired from Ryan's original project.
 
-## Mickey's Todo's
+## (Mickey's) Todo's
 
 * Add completion for:
 	- delb (branches)

@@ -36,4 +36,3 @@ plugs() {
 	vvvt
 	cd wp-content/plugins
 }
-
