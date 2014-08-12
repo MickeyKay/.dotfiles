@@ -40,6 +40,21 @@ updateAllSubs() {
 	git submodule update --init --recursive
 }
 
+# Diff local with remote branch
+rdiff() {
+
+	# Set default branch to master
+	if [ -z "$1" ]
+	then
+		echo "No branch specified, defaulting to 'master'."
+		branch="master"
+	else
+		branch=$1
+	fi
+
+	git diff $branch remotes/origin/$branch
+}
+
 # Delete local and remote branch (Format: delb <branch-name>)
 delb() {
 
