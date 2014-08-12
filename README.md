@@ -5,7 +5,7 @@ Here is an overview of all the installation to-do list when setting up a new mac
 
 1. Install XCode Command Line Tools - this should come before just about anything else!  
 	[`xcode-select --install`]
-1. Install Virtual Box (used by VVV).  
+1. Install Virtual Box AND VB Extension Pack(used by VVV).  
 	[https://www.virtualbox.org/wiki/Downloads]
 
 	#### Pre-Dotfiles
@@ -16,6 +16,13 @@ Here is an overview of all the installation to-do list when setting up a new mac
 1. Add GaryJ's deploy script to each dev install's plugins folder, or figure out a way to have this execute from one place.  
 	[https://github.com/GaryJones/wordpress-plugin-git-flow-svn-deploy]
 1. Run `dot` every now and then to update dotfile dependencies.
+
+## Still To Figure Out
+
+* Homebrew probably needs to install before anything else, so consider moving that part of `/micktastic/installation/install.sh`, into a separate top-level `install-me.sh` script that installs homebrew and then calls `script/bootstrap` - or something like that.
+* Auto install Virtualbox boxes (IE, Android, etc).
+* Port over settings including:
+	- Sublime Text
 
 ## Before Going Further. . .
 Before just installing and running all these dotfile goodies, make sure you've done the following:
