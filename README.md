@@ -1,4 +1,4 @@
-# Mickey's take on Holmand's dotfiles
+# Mickey's take on Holmand's dotfiles,
 
 ## General Installation Overview
 Here is an overview of all the installation to-do list when setting up a new machine:
