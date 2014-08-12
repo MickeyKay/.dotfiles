@@ -46,8 +46,8 @@ rdiff() {
 	# Set default branch to master
 	if [ -z "$1" ]
 	then
-		echo "No branch specified, defaulting to 'master'."
-		branch="master"
+		branch=$(git symbolic-ref --short HEAD)
+		echo "No branch specified, defaulting to '$branch'."
 	else
 		branch=$1
 	fi
