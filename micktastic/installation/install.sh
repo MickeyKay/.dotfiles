@@ -26,9 +26,9 @@ echo 'Done installing VVV plugins.'
 
 # Install Vagrant
 echo 'Installing VVV.'
-if [ ! -d $VAGRANT ]
+if [ ! -d ~/vagrant-local ]
 then
-    git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git $VAGRANT
+    git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git ~/vagrant-local
 else
     echo 'VVV is already installed.'
 fi
@@ -46,9 +46,9 @@ echo 'Done installing Vagrant Site Wizard.'
 
 # Install VVV Dashboar
 echo 'Installing VVV Dashboard.'
-if [ ! -d $VAGRANT/vvv-site-wizard ]
+if [ ! -d $ZSH/vvv-site-wizard ]
 then
-	git clone https://github.com/aliso/vvv-site-wizard.git $VAGRANT/vvv-site-wizard
+	git clone https://github.com/aliso/vvv-site-wizard.git ~/vagrant-local/vvv-site-wizard
 else
 	echo 'VVV Dashboard is already installed.'
 fi

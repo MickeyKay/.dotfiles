@@ -16,7 +16,10 @@
 			}
 		},
 		{
+			"contents": "",
 			"file": "micktastic/aliases.zsh",
+			"file_size": -1,
+			"file_write_time": -1,
 			"settings":
 			{
 				"buffer_size": 0,
@@ -28,7 +31,7 @@
 			"file": "micktastic/globals.zsh",
 			"settings":
 			{
-				"buffer_size": 69,
+				"buffer_size": 117,
 				"line_ending": "Unix",
 				"name": "# your project folder that we can `c [tab]` to"
 			}
@@ -58,7 +61,7 @@
 			"file": "micktastic/directories/aliases.zsh",
 			"settings":
 			{
-				"buffer_size": 131,
+				"buffer_size": 263,
 				"line_ending": "Unix"
 			}
 		},
@@ -66,7 +69,18 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 3812,
+				"buffer_size": 3900,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#!/bin/sh\n\n#\n# Custom Installations\n#\n# As per various smart people's suggestions, use Homebrew\n# to get more up-to-date versions of all these goodies.\n\n#\n# Homebrew Installs\n# \nbrew install git\nbrew install zsh\nbrew install python\n\n#\n# Varying Vagrant Vagrants\n#\necho 'Installing Varying Vagrant Vagrants.'\n\n# Install host updater and triggers plugins\necho 'Installing VVV plugins.'\nvagrant plugin install vagrant-hostsupdater\nvagrant plugin install vagrant-triggers\necho 'Done installing VVV plugins.'\n\n# Install Vagrant\necho 'Installing VVV.'\nif [ ! -d ~/vagrant-local ]\nthen\n    git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git ~/vagrant-local\nelse\n    echo 'VVV is already installed.'\nfi\necho 'Done installing VVV.'\n\n# Install Vagrant Site Wizard\necho 'Installing Vagrant Site Wizard.'\nif [ ! -d $ZSH/vvv-site-wizard ]\nthen\n	git clone https://github.com/aliso/vvv-site-wizard.git $ZSH/bin/vvv-site-wizard\nelse\n	echo 'Vagrant Site Wizard is already installed.'\nfi\necho 'Done installing Vagrant Site Wizard.'\n\n# Install VVV Dashboar\necho 'Installing VVV Dashboard.'\nif [ ! -d $ZSH/vvv-site-wizard ]\nthen\n	git clone https://github.com/aliso/vvv-site-wizard.git ~/vagrant-local/vvv-site-wizard\nelse\n	echo 'VVV Dashboard is already installed.'\nfi\necho 'Done installing VVV Dashboard.'\n\n",
+			"file": "/Users/mickey/.dotfiles/micktastic/installation/install.sh",
+			"file_size": 1280,
+			"file_write_time": 1407776747000000,
+			"settings":
+			{
+				"buffer_size": 1297,
 				"line_ending": "Unix"
 			}
 		}
@@ -144,7 +158,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -165,6 +179,9 @@
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -194,6 +211,9 @@
 						"settings":
 						{
 							"auto_name": "# Directories",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -207,20 +227,23 @@
 					"file": "micktastic/globals.zsh",
 					"settings":
 					{
-						"buffer_size": 69,
+						"buffer_size": 117,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								48,
-								48
+								117,
+								117
 							]
 						],
 						"settings":
 						{
 							"auto_name": "# your project folder that we can `c [tab]` to",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -248,6 +271,9 @@
 						"settings":
 						{
 							"auto_name": "# Commands",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
@@ -276,6 +302,9 @@
 						"settings":
 						{
 							"auto_name": "#",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -289,19 +318,22 @@
 					"file": "micktastic/directories/aliases.zsh",
 					"settings":
 					{
-						"buffer_size": 131,
+						"buffer_size": 263,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								131,
-								131
+								246,
+								246
 							]
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -315,23 +347,55 @@
 					"file": "README.md",
 					"settings":
 					{
-						"buffer_size": 3812,
+						"buffer_size": 3900,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								24,
-								24
+								0,
+								0
 							]
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/mickey/.dotfiles/micktastic/installation/install.sh",
+					"settings":
+					{
+						"buffer_size": 1297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								556,
+								571
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 107.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -370,6 +434,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 118.0
+	},
 	"replace":
 	{
 		"height": 0.0
@@ -380,6 +448,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"install",
+				"micktastic/installation/install.sh"
+			],
 			[
 				"read",
 				"README.md"
