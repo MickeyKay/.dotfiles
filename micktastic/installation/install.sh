@@ -9,9 +9,17 @@
 #
 # Homebrew Installs
 # 
-brew install git
-brew install zsh
+
+# Python
 brew install python
+
+# Git
+brew install git
+
+# ZSH
+brew install zsh
+sudo bash -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
+chsh -s /usr/local/bin/zsh
 
 #
 # Varying Vagrant Vagrants
