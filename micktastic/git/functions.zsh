@@ -52,7 +52,9 @@ rdiff() {
 		branch=$1
 	fi
 
-	git diff $branch remotes/origin/$branch
+	# Fetch and diff remote
+	git fetch origin
+	git diff origin/$branch
 }
 
 # Delete local and remote branch (Format: delb <branch-name>)
