@@ -19,7 +19,7 @@ Here is an overview of all the installation to-do list when setting up a new mac
 
 ## Still To Figure Out
 
-* Homebrew probably needs to install before anything else, so consider moving that part of `/micktastic/installation/install.sh`, into a separate top-level `install-me.sh` script that installs homebrew and then calls `script/bootstrap` - or something like that.
+* ZSH probably needs to install before anything else, so consider moving that part of `/micktastic/installation/install.sh`, into a separate top-level `install-me.sh` script that installs homebrew and then calls `script/bootstrap` - or something like that.
 * Auto install Virtualbox boxes (IE, Android, etc).
 * Port over settings including:
 	- Sublime Text
