@@ -8,28 +8,6 @@ readme() {
 	git push
 }
 
-# Add remote git repo and set 'origin' to it
-mkrepo() {
-
-	# Read in destination username and repo name (with default values if left blank)
-	read -p "GitHub username (MickeyKay): " username
-	username=${username:-MickeyKay}
-	read -p "Repo name: " reponame
-
-	# Create new remote repo
-	curl -u $username https://api.github.com/user/repos -d "{\"name\":\"$reponame\"}"
-
-	# Add remote repo as local origin (replace spaces in repo name with dashes: ${reponame// /-} )
-	# Note: uses https (not SSH)
-	git init
-	git remote add origin https://github.com/${username}/${reponame// /-}.git
-
-	# Initialize local git repo
-	git add -A
-	git commit -m "First commit"
-	git push -u origin master
-}
-
 # Pull all remote Git branches
 updateAllBranches() {
 	for remote in `git branch -r | grep -v master `; do git checkout --track $remote ; done
@@ -55,6 +33,33 @@ rdiff() {
 	# Fetch and diff remote
 	git fetch origin
 	git diff origin/$branch
+}
+
+
+# Add remote git repo and set 'origin' to it
+mkrepo() {
+
+	# Read in Git username (defaults to global name defined in ~/.dotfiles/git/gitconfig.symlink)
+	read "username?GitHub username ($GIT_USER): "
+	username=${username:-$GIT_USER}
+
+	# Read in name name (defaults current folder name)
+	dir=${PWD##*/}
+	read "reponame?Repo name($dir): "
+	reponame=${reponame:-$dir}
+
+	# Create new remote repo
+	curl -u $username https://api.github.com/user/repos -d "{\"name\":\"$reponame\"}"
+
+	# Add remote repo as local origin (replace spaces in repo name with dashes: ${reponame// /-} )
+	# Note: uses https (not SSH)
+	git init
+	git remote add origin https://github.com/${username}/${reponame// /-}.git
+
+	# Initialize local git repo
+	git add -A
+	git commit -m "First commit"
+	git push -u origin master
 }
 
 # Delete local and remote branch (Format: delb <branch-name>)
