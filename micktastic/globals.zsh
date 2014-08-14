@@ -4,6 +4,7 @@
 
 # Sites directory
 export SITES=~/Sites
+export DOTFILES=~/.dotfiles
 
 # VVV directory
 export VAGRANT=~/vagrant-local
