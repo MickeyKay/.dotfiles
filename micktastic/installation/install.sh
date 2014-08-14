@@ -6,20 +6,18 @@
 # As per various smart people's suggestions, use Homebrew
 # to get more up-to-date versions of all these goodies.
 
-#
-# Homebrew Installs
+VAGRANT_DIR=~/vagrant-local
+
 # 
+# Homebrew items
+#
 
-# Python
-brew install python
-
-# Git
+brew install node
+brew install zsh
 brew install git
 
-# ZSH
-brew install zsh
-sudo bash -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
-chsh -s /usr/local/bin/zsh
+# Grunt
+npm install -g grunt-cli
 
 #
 # Varying Vagrant Vagrants
@@ -30,35 +28,47 @@ echo 'Installing Varying Vagrant Vagrants.'
 echo 'Installing VVV plugins.'
 vagrant plugin install vagrant-hostsupdater
 vagrant plugin install vagrant-triggers
-echo 'Done installing VVV plugins.'
+echo $fg[green]'Done installing VVV plugins.'$reset_color
+echo ''
 
 # Install Vagrant
 echo 'Installing VVV.'
-if [ ! -d ~/vagrant-local ]
+if [ ! -d $VAGRANT_DIR ]
 then
-    git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git ~/vagrant-local
+    git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git $VAGRANT_DIR
 else
-    echo 'VVV is already installed.'
+    echo $fg[red]'VVV is already installed.'$reset_color
 fi
-echo 'Done installing VVV.'
+echo $fg[green]'Done installing VVV.'$reset_color
+echo ''
+
+# Install VVV Dashboard
+# https://github.com/topdown/VVV-Dashboard
+echo 'Installing VVV Dashboard.'
+if [ ! -d $VAGRANT_DIR/www/dashboard ]
+then
+	git clone https://github.com/topdown/VVV-Dashboard.git  $VAGRANT_DIR/www/dashboard
+
+	# Copy over dashboard PHP and CSS to override the defaults
+	cp $VAGRANT_DIR/www/dashboard/dashboard-custom.php $VAGRANT_DIR/www/default/dashboard-custom.php
+	cp $VAGRANT_DIR/www/dashboard/style.css $VAGRANT_DIR/www/default/style.css
+else
+	echo $fg[red]'VVV Dashboard is already installed.'$reset_color
+fi
+echo $fg[green]'Done installing VVV Dashboard.'$reset_color
+echo ''
 
 # Install Vagrant Site Wizard
-echo 'Installing Vagrant Site Wizard.'
-if [ ! -d $ZSH/vvv-site-wizard ]
+echo 'Installing Vagrant Site Wizard'
+if [ ! -d $VAGRANT_DIR/vvv-site-wizard ]
 then
-	git clone https://github.com/aliso/vvv-site-wizard.git $ZSH/bin/vvv-site-wizard
-else
-	echo 'Vagrant Site Wizard is already installed.'
-fi
-echo 'Done installing Vagrant Site Wizard.'
+	git clone https://github.com/aliso/vvv-site-wizard.git $VAGRANT_DIR/vvv-site-wizard
 
-# Install VVV Dashboar
-echo 'Installing VVV Dashboard.'
-if [ ! -d $ZSH/vvv-site-wizard ]
-then
-	git clone https://github.com/aliso/vvv-site-wizard.git ~/vagrant-local/vvv-site-wizard
-else
-	echo 'VVV Dashboard is already installed.'
-fi
-echo 'Done installing VVV Dashboard.'
+	# Symlink vvv command so it's available in the $PATH
+	ln -s $VAGRANT_DIR/vvv-site-wizard/vvv /usr/local/bin/vvv
 
+else
+	echo $fg[red]'Vagrant Site Wizard is already installed.'$reset_color
+fi
+echo $fg[green]'Done installing Vagrant Site Wizard.'$reset_color
+echo ''
