@@ -3,21 +3,24 @@
 #
 # Custom Installations
 #
-# As per various smart people's suggestions, use Homebrew
-# to get more up-to-date versions of all these goodies.
 
 VAGRANT_DIR=~/vagrant-local
 
 # 
-# Homebrew items
+# Homebrew install items
 #
-
+echo 'Installing various Homebrew packages.'
 brew install node
 brew install zsh
 brew install git
+echo $fg[green]'Done installing Homebrew packages.'$reset_color
+echo ''
 
 # Grunt
+echo 'Installing Grunt.'
 npm install -g grunt-cli
+echo $fg[green]'Done installing Grunt CLI.'$reset_color
+echo ''
 
 #
 # Varying Vagrant Vagrants
