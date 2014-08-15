@@ -13,6 +13,7 @@ echo 'Installing various Homebrew packages.'
 brew install node
 brew install zsh
 brew install git
+brew install subversion
 echo $fg[green]'Done installing Homebrew packages.'$reset_color
 echo ''
 
