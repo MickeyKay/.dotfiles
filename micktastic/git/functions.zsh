@@ -39,8 +39,12 @@ rdiff() {
 # Add remote git repo and set 'origin' to it
 mkrepo() {
 
+	# Check whether to make a Github or Bitbucket repo
+	read "repoType?[g]ithub or [b]itbucket? [g]: "
+	repotype=${repoType:-g}
+
 	# Read in Git username (defaults to global name defined in ~/.dotfiles/git/gitconfig.symlink)
-	read "username?GitHub username ($GIT_USER): "
+	read "username?Username ($GIT_USER): "
 	username=${username:-$GIT_USER}
 
 	# Read in name name (defaults current folder name)
@@ -48,13 +52,33 @@ mkrepo() {
 	read "reponame?Repo name($dir): "
 	reponame=${reponame:-$dir}
 
-	# Create new remote repo
-	curl -u $username https://api.github.com/user/repos -d "{\"name\":\"$reponame\"}"
+	# Get Bitbucket password right away (Git will prompt you)
+	read "password?Password: "
+	
 
-	# Add remote repo as local origin (replace spaces in repo name with dashes: ${reponame// /-} )
-	# Note: uses https (not SSH)
-	git init
-	git remote add origin https://github.com/${username}/${reponame// /-}.git
+	# Create new remote repo
+	if [[ "$repotype" == "g" ]]
+	then
+
+		echo 'Creating new Github repo.'
+
+		# Create Github repo
+		git init
+		curl -u $username:$password https://api.github.com/user/repos -d "{\"name\":\"$reponame\"}"
+
+		# Add remote
+		git remote add origin https://github.com/${username}/${reponame// /-}.git
+	else
+
+		echo 'Creating new Bitbucket repo.'
+
+		# Create Bitbucket repo
+		git init
+		curl --user $username:$password https://api.bitbucket.org/1.0/repositories/ --data name=$reponame --data is_private='true'
+
+		# Add remote
+		git remote add origin https://${username}@bitbucket.org/${username}/${reponame// /-}.git
+	fi
 
 	# Initialize local git repo
 	git add -A
