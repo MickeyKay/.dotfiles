@@ -8,79 +8,18 @@
 	"buffers":
 	[
 		{
-			"file": "script/bootstrap",
+			"file": "/Users/mickey/.dotfiles/micktastic/directories/aliases.zsh",
 			"settings":
 			{
-				"buffer_size": 2971,
+				"buffer_size": 288,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "",
-			"file": "micktastic/aliases.zsh",
-			"file_size": -1,
-			"file_write_time": -1,
+			"file": "/Users/mickey/.dotfiles/micktastic/globals.zsh",
 			"settings":
 			{
-				"buffer_size": 0,
-				"line_ending": "Unix",
-				"name": "# Directories"
-			}
-		},
-		{
-			"file": "micktastic/globals.zsh",
-			"settings":
-			{
-				"buffer_size": 117,
-				"line_ending": "Unix",
-				"name": "# your project folder that we can `c [tab]` to"
-			}
-		},
-		{
-			"contents": "#\n# Functions\n#\n\n# Open hosts file\nhosts() {\n	sudo nano -e /private/etc/hosts\n}\n\n# Flush DNS\nflush() {\n	sudo killall -HUP mDNSResponder\n}\n\n# Show hidden files\nshowFiles() {\n	defaults write com.apple.finder AppleShowAllFiles TRUE\n	killall	Finder\n}\n\n# Hide hidden files\nhideFiles() {\n	defaults write com.apple.finder AppleShowAllFiles FALSE\n	killall Finder\n}\n\n# Toggle hidden files visiblity\ntoggleFiles() {\n\n	# Check if hidden files are visible and store result in a variable\n	isVisible=$(defaults read com.apple.finder AppleShowAllFiles)\n\n	# Toggle visibility based on variables value\n	if [ $isVisible = FALSE ]\n	then\n		showFiles\n	else\n		hideFiles\n	fi\n\n}",
-			"file": "micktastic/functions.zsh",
-			"file_size": 654,
-			"file_write_time": 1407483303000000,
-			"settings":
-			{
-				"buffer_size": 654,
-				"line_ending": "Unix",
-				"name": "# Commands"
-			}
-		},
-		{
-			"file": "micktastic/git/aliases.zsh",
-			"settings":
-			{
-				"buffer_size": 53,
-				"line_ending": "Unix",
-				"name": "#"
-			}
-		},
-		{
-			"file": "micktastic/directories/aliases.zsh",
-			"settings":
-			{
-				"buffer_size": 263,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "README.md",
-			"settings":
-			{
-				"buffer_size": 3900,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "#!/bin/sh\n\n#\n# Custom Installations\n#\n# As per various smart people's suggestions, use Homebrew\n# to get more up-to-date versions of all these goodies.\n\n#\n# Homebrew Installs\n# \nbrew install git\nbrew install zsh\nbrew install python\n\n#\n# Varying Vagrant Vagrants\n#\necho 'Installing Varying Vagrant Vagrants.'\n\n# Install host updater and triggers plugins\necho 'Installing VVV plugins.'\nvagrant plugin install vagrant-hostsupdater\nvagrant plugin install vagrant-triggers\necho 'Done installing VVV plugins.'\n\n# Install Vagrant\necho 'Installing VVV.'\nif [ ! -d ~/vagrant-local ]\nthen\n    git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git ~/vagrant-local\nelse\n    echo 'VVV is already installed.'\nfi\necho 'Done installing VVV.'\n\n# Install Vagrant Site Wizard\necho 'Installing Vagrant Site Wizard.'\nif [ ! -d $ZSH/vvv-site-wizard ]\nthen\n	git clone https://github.com/aliso/vvv-site-wizard.git $ZSH/bin/vvv-site-wizard\nelse\n	echo 'Vagrant Site Wizard is already installed.'\nfi\necho 'Done installing Vagrant Site Wizard.'\n\n# Install VVV Dashboar\necho 'Installing VVV Dashboard.'\nif [ ! -d $ZSH/vvv-site-wizard ]\nthen\n	git clone https://github.com/aliso/vvv-site-wizard.git ~/vagrant-local/vvv-site-wizard\nelse\n	echo 'VVV Dashboard is already installed.'\nfi\necho 'Done installing VVV Dashboard.'\n\n",
-			"file": "/Users/mickey/.dotfiles/micktastic/installation/install.sh",
-			"file_size": 1280,
-			"file_write_time": 1407776747000000,
-			"settings":
-			{
-				"buffer_size": 1297,
+				"buffer_size": 245,
 				"line_ending": "Unix"
 			}
 		}
@@ -109,9 +48,17 @@
 	},
 	"file_history":
 	[
-		"/Users/mickey/.dotfiles/micktastic/directories/functions copy.zsh",
-		"/Users/mickey/.dotfiles/micktastic/git/functions.zsh",
 		"/Users/mickey/.dotfiles/git/gitconfig.symlink",
+		"/Users/mickey/.dotfiles/micktastic/installation/install.sh",
+		"/Users/Mickey/.dotfiles/README.md",
+		"/Users/Mickey/.dotfiles/micktastic/directories/aliases.zsh",
+		"/Users/Mickey/.dotfiles/micktastic/git/aliases.zsh",
+		"/Users/Mickey/.dotfiles/micktastic/functions.zsh",
+		"/Users/Mickey/.dotfiles/micktastic/globals.zsh",
+		"/Users/Mickey/.dotfiles/script/bootstrap",
+		"/Users/mickey/.dotfiles/micktastic/git/functions.zsh",
+		"/Users/Mickey/.dotfiles/micktastic/aliases.zsh",
+		"/Users/mickey/.dotfiles/micktastic/directories/functions copy.zsh",
 		"/Users/mickey/.dotfiles/bin/git-nuke",
 		"/Users/mickey/.dotfiles/git/completion.zsh",
 		"/Users/mickey/.dotfiles/system/_path.zsh",
@@ -133,6 +80,8 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"/Users/mickey/.dotfiles",
+			"/Users/Mickey/Sites/IGG.MM.me/wp-content/plugins/members"
 		]
 	},
 	"find_state":
@@ -140,6 +89,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"git",
+			"user",
+			"mkrepo",
+			"gls",
 			"install"
 		],
 		"highlight": true,
@@ -158,23 +111,22 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "script/bootstrap",
+					"file": "/Users/mickey/.dotfiles/micktastic/directories/aliases.zsh",
 					"settings":
 					{
-						"buffer_size": 2971,
+						"buffer_size": 288,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								169,
-								173
+								287,
+								287
 							]
 						],
 						"settings":
@@ -182,9 +134,7 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -194,139 +144,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "micktastic/aliases.zsh",
+					"file": "/Users/mickey/.dotfiles/micktastic/globals.zsh",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 245,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_name": "# Directories",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "micktastic/globals.zsh",
-					"settings":
-					{
-						"buffer_size": 117,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								117,
-								117
-							]
-						],
-						"settings":
-						{
-							"auto_name": "# your project folder that we can `c [tab]` to",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "micktastic/functions.zsh",
-					"settings":
-					{
-						"buffer_size": 654,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								543,
-								543
-							]
-						],
-						"settings":
-						{
-							"auto_name": "# Commands",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "micktastic/git/aliases.zsh",
-					"settings":
-					{
-						"buffer_size": 53,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								51,
-								30
-							]
-						],
-						"settings":
-						{
-							"auto_name": "#",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "micktastic/directories/aliases.zsh",
-					"settings":
-					{
-						"buffer_size": 263,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								246,
-								246
+								97,
+								97
 							]
 						],
 						"settings":
@@ -338,64 +167,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "README.md",
-					"settings":
-					{
-						"buffer_size": 3900,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/Users/mickey/.dotfiles/micktastic/installation/install.sh",
-					"settings":
-					{
-						"buffer_size": 1297,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								556,
-								571
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 107.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

@@ -8,10 +8,11 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# DOT files
+alias dots="cd ~/.dotfiles"
+
 # Base directories
 alias root="cd /"
 alias home="cd ~/"
 alias desk="cd ~/Desktop"
-
-# DOT files
-alias dots="cd ~/.dotfiles"
+alias sites="cd ~/Sites"
