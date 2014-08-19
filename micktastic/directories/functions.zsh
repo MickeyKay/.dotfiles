@@ -34,3 +34,9 @@ plugs() {
 	vvvt
 	cd wp-content/plugins
 }
+
+# Themes
+themes() {
+	vvvt
+	cd wp-content/themes
+}

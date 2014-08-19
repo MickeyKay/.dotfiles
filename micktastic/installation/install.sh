@@ -9,12 +9,13 @@ VAGRANT_DIR=~/vagrant-local
 # 
 # Homebrew install items
 #
-echo 'Installing various Homebrew packages.'
+echo 'Installing various packages via Homebrew.'
 brew install node
+brew install ruby
 brew install zsh
 brew install git
 brew install subversion
-echo $fg[green]'Done installing Homebrew packages.'$reset_color
+echo $fg[green]'Done installing packages via Homebrew.'$reset_color
 echo ''
 
 # Grunt
@@ -22,6 +23,19 @@ echo 'Installing Grunt.'
 npm install -g grunt-cli
 echo $fg[green]'Done installing Grunt CLI.'$reset_color
 echo ''
+
+# Yeoman
+echo 'Installing Yeoman.'
+npm install -g yo
+echo $fg[green]'Done installing Yeoman.'$reset_color
+echo ''
+
+# Installing Sass
+echo 'Installing Sass.'
+gem install sass
+echo $fg[green]'Done installing Sass.'$reset_color
+echo ''
+
 
 #
 # Varying Vagrant Vagrants
