@@ -16,10 +16,13 @@
 			}
 		},
 		{
+			"contents": "#!/bin/sh\n\n#\n# Custom Installations\n#\n\nVAGRANT_DIR=~/vagrant-local\n\n# \n# Homebrew install items\n#\necho 'Updating Homebrew.'\nbrew update\necho $fg[green]'Done updating Homebrew.'$reset_color\necho ''\n\necho 'Installing various packages via Homebrew.'\nbrew install node\nbrew install ruby\nbrew install zsh\nbrew install git\nbrew install subversion\necho $fg[green]'Done installing packages via Homebrew.'$reset_color\necho ''\n\necho 'Installing Composer via Homebrew.'\nbrew tap homebrew/homebrew-php\nbrew tap homebrew/dupes\nbrew tap homebrew/versions\nbrew install php54\nbrew install php55\nbrew install homebrew/php/composer\necho $fg[green]'Done installing Composer via Homebrew.'$reset_color\necho ''\n\n# Grunt\necho 'Installing Grunt.'\nnpm install -g grunt-cli\necho $fg[green]'Done installing Grunt CLI.'$reset_color\necho ''\n\n# Yeoman\necho 'Installing Yeoman.'\nnpm install -g yo\necho $fg[green]'Done installing Yeoman.'$reset_color\necho ''\n\n# Installing Sass\necho 'Installing Sass.'\ngem install sass\necho $fg[green]'Done installing Sass.'$reset_color\necho ''\n\n\n#\n# Varying Vagrant Vagrants\n#\necho 'Installing Varying Vagrant Vagrants.'\n\n# Install host updater and triggers plugins\necho 'Installing VVV plugins.'\nvagrant plugin install vagrant-hostsupdater\nvagrant plugin install vagrant-triggers\necho $fg[green]'Done installing VVV plugins.'$reset_color\necho ''\n\n# Install Vagrant\necho 'Installing VVV.'\nif [ ! -d $VAGRANT_DIR ]\nthen\n    git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git $VAGRANT_DIR\nelse\n    echo $fg[red]'VVV is already installed.'$reset_color\nfi\necho $fg[green]'Done installing VVV.'$reset_color\necho ''\n\n# Install VVV Dashboard\n# https://github.com/topdown/VVV-Dashboard\necho 'Installing VVV Dashboard.'\nif [ ! -d $VAGRANT_DIR/www/dashboard ]\nthen\n	git clone https://github.com/topdown/VVV-Dashboard.git  $VAGRANT_DIR/www/dashboard\n\n	# Copy over dashboard PHP and CSS to override the defaults\n	cp $VAGRANT_DIR/www/dashboard/dashboard-custom.php $VAGRANT_DIR/www/default/dashboard-custom.php\n	cp $VAGRANT_DIR/www/dashboard/style.css $VAGRANT_DIR/www/default/style.css\nelse\n	echo $fg[red]'VVV Dashboard is already installed.'$reset_color\nfi\necho $fg[green]'Done installing VVV Dashboard.'$reset_color\necho ''\n\n# Install Vagrant Site Wizard\necho 'Installing Vagrant Site Wizard'\nif [ ! -d $VAGRANT_DIR/vvv-site-wizard ]\nthen\n	git clone https://github.com/aliso/vvv-site-wizard.git $VAGRANT_DIR/vvv-site-wizard\n\n	# Symlink vvv command so it's available in the $PATH\n	ln -s $VAGRANT_DIR/vvv-site-wizard/vvv /usr/local/bin/vvv\n\nelse\n	echo $fg[red]'Vagrant Site Wizard is already installed.'$reset_color\nfi\necho $fg[green]'Done installing Vagrant Site Wizard.'$reset_color\necho ''\n",
 			"file": "micktastic/installation/install.sh",
+			"file_size": 2679,
+			"file_write_time": 1408744421000000,
 			"settings":
 			{
-				"buffer_size": 2320,
+				"buffer_size": 2693,
 				"line_ending": "Unix",
 				"name": "#"
 			}
@@ -28,7 +31,7 @@
 			"file": "micktastic/globals.zsh",
 			"settings":
 			{
-				"buffer_size": 217,
+				"buffer_size": 245,
 				"line_ending": "Unix",
 				"name": "# your project folder that we can `c [tab]` to"
 			}
@@ -70,7 +73,7 @@
 			"file": "micktastic/directories/aliases.zsh",
 			"settings":
 			{
-				"buffer_size": 263,
+				"buffer_size": 288,
 				"line_ending": "Unix"
 			}
 		},
@@ -148,10 +151,13 @@
 			}
 		},
 		{
+			"contents": "# Sets reasonable OS X defaults.\n#\n# Or, in other words, set shit how I like in OS X.\n#\n# The original idea (and a couple settings) were grabbed from:\n#   https://github.com/mathiasbynens/dotfiles/blob/master/.osx\n#\n# Run ./set-defaults.sh and you'll be good to go.\n#\n\n# Disable press-and-hold for keys in favor of key repeat.\ndefaults write -g ApplePressAndHoldEnabled -bool false\n\n# Use AirDrop over every interface. srsly this should be a default.\ndefaults write com.apple.NetworkBrowser BrowseAllInterfaces 1\n\n# Always open everything in Finder's column view. This is important.\ndefaults write com.apple.Finder FXPreferredViewStyle clmv\n\n# Show the ~/Library folder.\nchflags nohidden ~/Library\n\n# Set a really fast key repeat.\ndefaults write NSGlobalDomain KeyRepeat -int 0\n\n# Set the Finder prefs for showing a few different volumes on the Desktop.\ndefaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true\ndefaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true\n\n# Enable full keyboard access for all controls\n# (e.g. enable Tab in modal dialogs)\ndefaults write NSGlobalDomain AppleKeyboardUIMode -int 3\n\n# Expand save panel by default\ndefaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true\n\n# Expand print panel by default\ndefaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true\n\n# Disable the “Are you sure you want to open this application?” dialog\ndefaults write com.apple.LaunchServices LSQuarantine -bool false\n\n# Run the screensaver if we're in the bottom-left hot corner.\ndefaults write com.apple.dock wvous-bl-corner -int 5\ndefaults write com.apple.dock wvous-bl-modifier -int 0",
 			"file": "osx/set-defaults.sh",
+			"file_size": 1667,
+			"file_write_time": 1409166900000000,
 			"settings":
 			{
-				"buffer_size": 1170,
+				"buffer_size": 1663,
 				"line_ending": "Unix"
 			}
 		},
@@ -272,7 +278,7 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 15,
 			"sheets":
 			[
 				{
@@ -306,15 +312,15 @@
 					"file": "micktastic/installation/install.sh",
 					"settings":
 					{
-						"buffer_size": 2320,
+						"buffer_size": 2693,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								294,
-								294
+								70,
+								70
 							]
 						],
 						"settings":
@@ -324,7 +330,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 217.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -334,15 +340,15 @@
 					"file": "micktastic/globals.zsh",
 					"settings":
 					{
-						"buffer_size": 217,
+						"buffer_size": 245,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								117,
-								117
+								0,
+								0
 							]
 						],
 						"settings":
@@ -443,15 +449,15 @@
 					"file": "micktastic/directories/aliases.zsh",
 					"settings":
 					{
-						"buffer_size": 263,
+						"buffer_size": 288,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								246,
-								246
+								0,
+								0
 							]
 						],
 						"settings":
@@ -509,7 +515,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1394,7 +1401,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 1.0,
-						"translation.y": 899.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1511,15 +1518,15 @@
 					"file": "osx/set-defaults.sh",
 					"settings":
 					{
-						"buffer_size": 1170,
+						"buffer_size": 1663,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1088,
-								1091
+								1141,
+								1141
 							]
 						],
 						"settings":
@@ -1654,6 +1661,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"osx",
+				"osx/set-defaults.sh"
+			],
 			[
 				"bo",
 				"script/bootstrap"

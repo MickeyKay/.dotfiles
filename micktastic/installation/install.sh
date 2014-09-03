@@ -9,6 +9,11 @@ VAGRANT_DIR=~/vagrant-local
 # 
 # Homebrew install items
 #
+echo 'Updating Homebrew.'
+brew update
+echo $fg[green]'Done updating Homebrew.'$reset_color
+echo ''
+
 echo 'Installing various packages via Homebrew.'
 brew install node
 brew install ruby
@@ -16,6 +21,15 @@ brew install zsh
 brew install git
 brew install subversion
 echo $fg[green]'Done installing packages via Homebrew.'$reset_color
+echo ''
+
+echo 'Installing Composer via Homebrew.'
+brew tap homebrew/homebrew-php
+brew tap homebrew/dupes
+brew tap homebrew/versions
+brew install php55-intl
+brew install homebrew/php/composer
+echo $fg[green]'Done installing Composer via Homebrew.'$reset_color
 echo ''
 
 # Grunt
