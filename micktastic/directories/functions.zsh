@@ -29,14 +29,27 @@ vvvv() {
 	cd wordpress-develop
 }
 
+# Themes
+themes() {
+	vvvt
+	cd wp-content/themes
+}
+
 # Plugins
 plugs() {
 	vvvt
 	cd wp-content/plugins
 }
 
-# Themes
-themes() {
-	vvvt
-	cd wp-content/themes
+#
+# Old Structure
+#
+
+testPlugs() {
+	cd $SITES/WP\ Plugins\ -\ Test/wp-content/plugins
 }
+
+finPlugs() {
+	cd $SITES/WP\ Plugins\ -\ Final
+}
+
