@@ -35,6 +35,12 @@ themes() {
 	cd wp-content/themes
 }
 
+# Trestle
+trestle() {
+	themes
+	cd trestle
+}
+
 # Plugins
 plugs() {
 	vvvt
