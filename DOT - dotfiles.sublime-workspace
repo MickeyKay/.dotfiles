@@ -90,7 +90,7 @@
 			"file": "micktastic/directories/functions.zsh",
 			"settings":
 			{
-				"buffer_size": 387,
+				"buffer_size": 572,
 				"line_ending": "Unix"
 			}
 		},
@@ -102,14 +102,6 @@
 				"line_ending": "Unix",
 				"name": "Find Results",
 				"scratch": true
-			}
-		},
-		{
-			"file": "micktastic/git/functions.zsh",
-			"settings":
-			{
-				"buffer_size": 2227,
-				"line_ending": "Unix"
 			}
 		},
 		{
@@ -151,10 +143,7 @@
 			}
 		},
 		{
-			"contents": "# Sets reasonable OS X defaults.\n#\n# Or, in other words, set shit how I like in OS X.\n#\n# The original idea (and a couple settings) were grabbed from:\n#   https://github.com/mathiasbynens/dotfiles/blob/master/.osx\n#\n# Run ./set-defaults.sh and you'll be good to go.\n#\n\n# Disable press-and-hold for keys in favor of key repeat.\ndefaults write -g ApplePressAndHoldEnabled -bool false\n\n# Use AirDrop over every interface. srsly this should be a default.\ndefaults write com.apple.NetworkBrowser BrowseAllInterfaces 1\n\n# Always open everything in Finder's column view. This is important.\ndefaults write com.apple.Finder FXPreferredViewStyle clmv\n\n# Show the ~/Library folder.\nchflags nohidden ~/Library\n\n# Set a really fast key repeat.\ndefaults write NSGlobalDomain KeyRepeat -int 0\n\n# Set the Finder prefs for showing a few different volumes on the Desktop.\ndefaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true\ndefaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true\n\n# Enable full keyboard access for all controls\n# (e.g. enable Tab in modal dialogs)\ndefaults write NSGlobalDomain AppleKeyboardUIMode -int 3\n\n# Expand save panel by default\ndefaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true\n\n# Expand print panel by default\ndefaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true\n\n# Disable the “Are you sure you want to open this application?” dialog\ndefaults write com.apple.LaunchServices LSQuarantine -bool false\n\n# Run the screensaver if we're in the bottom-left hot corner.\ndefaults write com.apple.dock wvous-bl-corner -int 5\ndefaults write com.apple.dock wvous-bl-modifier -int 0",
 			"file": "osx/set-defaults.sh",
-			"file_size": 1667,
-			"file_write_time": 1409166900000000,
 			"settings":
 			{
 				"buffer_size": 1663,
@@ -210,6 +199,7 @@
 	},
 	"file_history":
 	[
+		"/Users/Mickey/.dotfiles/micktastic/git/functions.zsh",
 		"/Users/mickey/.dotfiles/micktastic/vagrant/untitled",
 		"/Users/mickey/.dotfiles/script/bootstrap",
 		"/Users/mickey/.dotfiles/homebrew/install.sh",
@@ -278,7 +268,7 @@
 	"groups":
 	[
 		{
-			"selected": 15,
+			"selected": 14,
 			"sheets":
 			[
 				{
@@ -299,6 +289,9 @@
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -326,11 +319,14 @@
 						"settings":
 						{
 							"auto_name": "#",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 217.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -354,6 +350,9 @@
 						"settings":
 						{
 							"auto_name": "# your project folder that we can `c [tab]` to",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -381,6 +380,9 @@
 						"settings":
 						{
 							"auto_name": "# Commands",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
@@ -409,6 +411,9 @@
 						"settings":
 						{
 							"auto_name": "_git_delb()",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -436,6 +441,9 @@
 						"settings":
 						{
 							"auto_name": "#",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -462,6 +470,9 @@
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -489,6 +500,9 @@
 						"settings":
 						{
 							"auto_name": "#",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -502,19 +516,22 @@
 					"file": "micktastic/directories/functions.zsh",
 					"settings":
 					{
-						"buffer_size": 387,
+						"buffer_size": 572,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								387,
-								387
+								0,
+								0
 							]
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
@@ -1366,11 +1383,14 @@
 						"settings":
 						{
 							"detect_indentation": false,
+							"incomplete_sync": null,
 							"output_tag": 2,
+							"remote_loading": false,
 							"result_base_dir": "",
 							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
 							"result_line_regex": "^ +([0-9]+):",
 							"scroll_past_end": true,
+							"synced": false,
 							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -1381,33 +1401,6 @@
 				},
 				{
 					"buffer": 10,
-					"file": "micktastic/git/functions.zsh",
-					"settings":
-					{
-						"buffer_size": 2227,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1575,
-								1575
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 1.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
 					"file": "micktastic/git/wordpress-plugin-git-flow-svn-deploy/deploy.sh",
 					"settings":
 					{
@@ -1424,6 +1417,9 @@
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -1433,7 +1429,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 11,
 					"file": "script/bootstrap",
 					"settings":
 					{
@@ -1450,6 +1446,9 @@
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -1461,7 +1460,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 12,
 					"file": "zsh/zshrc.symlink",
 					"settings":
 					{
@@ -1478,6 +1477,9 @@
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -1487,7 +1489,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 13,
 					"file": "micktastic/directories/functions copy.zsh",
 					"settings":
 					{
@@ -1504,6 +1506,9 @@
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
@@ -1514,7 +1519,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 14,
 					"file": "osx/set-defaults.sh",
 					"settings":
 					{
@@ -1531,6 +1536,9 @@
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -1540,7 +1548,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 15,
 					"file": "bin/dot",
 					"settings":
 					{
@@ -1557,6 +1565,9 @@
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/Graphviz/DOT.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -1566,7 +1577,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 16,
 					"file": "script/install",
 					"settings":
 					{
@@ -1583,6 +1594,9 @@
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -1592,7 +1606,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 17,
 					"file": "micktastic/vagrant/aliases.zsh",
 					"settings":
 					{
@@ -1609,6 +1623,9 @@
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -1651,6 +1668,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 118.0
+	},
 	"replace":
 	{
 		"height": 64.0
