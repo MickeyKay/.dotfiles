@@ -18,6 +18,12 @@ updateAllSubs() {
 	git submodule update --init --recursive
 }
 
+# Pull in all subs & branches
+updateAll() {
+	updateAllBranches
+	updateAllSubs
+}
+
 # Diff local with remote branch
 rdiff() {
 

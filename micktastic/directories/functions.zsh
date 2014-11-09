@@ -35,6 +35,12 @@ themes() {
 	cd wp-content/themes
 }
 
+# Plugin and theme tester
+tester() {
+	vag
+	cd tester/htdocs/wp-content/
+}
+
 # Trestle
 trestle() {
 	themes
