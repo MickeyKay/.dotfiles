@@ -60,12 +60,11 @@ mkrepo() {
 
 	# Get Bitbucket password right away (Git will prompt you)
 	read "password?Password: "
-	
 
 	# Create new remote repo
+
 	if [[ "$repotype" == "g" ]]
 	then
-
 		echo 'Creating new Github repo.'
 
 		# Create Github repo
@@ -75,7 +74,6 @@ mkrepo() {
 		# Add remote
 		git remote add origin https://github.com/${username}/${reponame// /-}.git
 	else
-
 		echo 'Creating new Bitbucket repo.'
 
 		# Create Bitbucket repo

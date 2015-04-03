@@ -9,10 +9,10 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # DOT files
-alias dots="cd ~/.dotfiles"
+alias dotd="cd ~/.dotfiles"
 
-# grunt-init 
-alias gi="cd ~/.grunt-init"
+# GRUNT files
+alias gruntd="cd ~/.grunt-init"
 
 # Base directories
 alias root="cd /"
