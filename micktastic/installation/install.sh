@@ -20,6 +20,7 @@ brew install ruby
 brew install zsh
 brew install git
 brew install subversion
+brew install ngrok
 echo $fg[green]'Done installing packages via Homebrew.'$reset_color
 echo ''
 
