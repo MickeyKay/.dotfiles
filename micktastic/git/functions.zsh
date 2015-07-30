@@ -90,6 +90,15 @@ mkrepo() {
 	git push -u origin master
 }
 
+archiveBranch() {
+	if [ "$1" != "" ]; then
+		git tag archive/$1 $1
+		delb $1
+	else
+		echo "Please specify a branch"
+	fi
+}
+
 # Delete local and remote branch (Format: delb <branch-name>)
 delb() {
 
