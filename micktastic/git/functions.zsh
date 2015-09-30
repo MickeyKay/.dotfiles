@@ -97,21 +97,6 @@ archiveBranch() {
 	else
 		echo "Please specify a branch"
 	fi
-}
 
-# Delete local and remote branch (Format: delb <branch-name>)
-delb() {
-
-	# Get branch name from input after 'delb'
-	branch=$1
-
-	# Get remote name
-	remote=`git remote`
-
-	# Delete local branch
-	git branch -d $branch
-
-	# Delete remote branch
-	git push $remote :$branch
-
+	git push origin --tags
 }
