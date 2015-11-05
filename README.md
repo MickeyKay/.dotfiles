@@ -20,7 +20,8 @@ Then set up and run the .dotfiles install:
 ```
 git clone --recursive https://github.com/MickeyKay/.dotfiles
 cd ~/.dotfiles
-script/bootstrap
+script/bootstrap // Bootstraps .dotfiles stuff
+./micktastic/installation/install.sh // Runs micktastic install stuff
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
