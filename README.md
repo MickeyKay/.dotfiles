@@ -10,7 +10,7 @@ Run `dot` (inside `/bin`) every now and then to update all the goodies.
 Run this:
 
 ```
-git clone --recursive https://github.com/MickeyKay/dotfiles.git ~/.dotfiles
+git clone --recursive https://github.com/MickeyKay/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
@@ -38,7 +38,7 @@ Here is an overview of all the installation to-do list when setting up a new mac
 	---
 
 1. Install these dotfiles (/micktastic/installation/install.sh should install some goodies when this happens).  
-	[[instructions below](https://github.com/MickeyKay/dotfiles#installation)]
+	[[instructions below](https://github.com/MickeyKay/.dotfiles#installation)]
 1. Add GaryJ's deploy script to each dev install's plugins folder, or figure out a way to have this execute from one place.  
 	[https://github.com/GaryJones/wordpress-plugin-git-flow-svn-deploy]
 1. Run `dot` every now and then to update dotfile dependencies.
