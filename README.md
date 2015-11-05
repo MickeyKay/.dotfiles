@@ -8,9 +8,11 @@ Run `dot` (inside `/bin`) every now and then to update all the goodies.
 
 ## Installation
 First, make sure Homebrew is installed:
+
 `which brew`
 
 If not, install it:
+
 `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 Then set up and run the .dotfiles install:
