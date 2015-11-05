@@ -6,7 +6,13 @@
 
 VAGRANT_DIR=~/vagrant-local
 
-# 
+#
+#  Install Homebrew
+#
+ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
+
+
+#
 # Homebrew install items
 #
 echo 'Updating Homebrew.'
