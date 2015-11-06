@@ -23,6 +23,6 @@ nwthemes() {
 }
 
 alias nwvu="nwvag && vagrant up"
-alias vh="nwvag && vagrant halt"
-alias vs="nwvag && vagrant status"
+alias nwvh="nwvag && vagrant halt"
+alias nwvs="nwvag && vagrant status"
 

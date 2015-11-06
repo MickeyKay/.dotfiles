@@ -105,3 +105,7 @@ else
 fi
 echo $fg[green]'Done installing Vagrant Site Wizard.'$reset_color
 echo ''
+
+# Set zsh to default shell
+echo 'Setting default shell to zsh'
+chsh -s /bin/zsh
