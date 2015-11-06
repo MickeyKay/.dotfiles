@@ -6,7 +6,7 @@
 
 VAGRANT_DIR=~/vagrant-local
 
-# 
+#
 # Homebrew install items
 #
 echo 'Updating Homebrew.'

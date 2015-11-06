@@ -2,10 +2,10 @@
   editor:
     showIndentGuide: true
     fontFamily: "Menlo"
-    fontSize: 15
     invisibles: {}
+    fontSize: 15
+    softWrapAtPreferredLineLength: true
   core:
-    excludeVcsIgnoredPaths: true
     ignoredNames: [
       ".bundle"
       ".git"
@@ -34,4 +34,3 @@
     showOnStartup: false
   "release-notes":
     viewedVersion: "0.89.0"
-  "tree-view": {}
