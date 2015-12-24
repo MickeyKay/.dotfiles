@@ -90,6 +90,13 @@ mkrepo() {
 	git push -u origin master
 }
 
+# Delete branch.
+delb() {
+	git branch -D $1
+	git push origin :$1
+}
+
+# Archive branch.
 archiveBranch() {
 	if [ "$1" != "" ]; then
 		git tag archive/$1 $1
