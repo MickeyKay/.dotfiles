@@ -29,6 +29,6 @@ vvvv() {
 	cd wordpress-develop
 }
 
-alias vu="vag && vagrant up"
-alias vh="vag && vagrant halt"
+alias vu="vag && sudo vagrant up"
+alias vh="vag && sudo vagrant halt"
 alias vs="vag && vagrant status"

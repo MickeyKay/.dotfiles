@@ -22,7 +22,7 @@ nwthemes() {
 	cd $NWTHEMES
 }
 
-alias nwvu="nwvag && vagrant up"
-alias nwvh="nwvag && vagrant halt"
+alias nwvu="nwvag && sudo vagrant up"
+alias nwvh="nwvag && sudo vagrant halt"
 alias nwvs="nwvag && vagrant status"
 
