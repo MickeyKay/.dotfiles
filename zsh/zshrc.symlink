@@ -39,3 +39,7 @@ do
 done
 
 unset config_files
+
+[ -s "/Users/mkay/.scm_breeze/scm_breeze.sh" ] && source "/Users/mkay/.scm_breeze/scm_breeze.sh"
+
+eval "$(rbenv init -)"

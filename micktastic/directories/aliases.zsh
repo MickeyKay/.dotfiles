@@ -21,3 +21,5 @@ alias desk="cd ~/Desktop"
 alias sites="cd ~/Sites"
 alias subUser="cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
 
+# Vagrant
+alias vn="vagrant"

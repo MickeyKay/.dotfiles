@@ -1,15 +1,27 @@
 #
-# Directory Navigation Functions
+# NerdWallet
 #
 
+export NWVAGRANT=~/dev-vagrant/vmware
+export NW=/srv/nerdwallet
+export NWSITE=$NW/app-site
+export NWBLOG=$NWSITE/blog
+export NWPLUGS=$NWBLOG/wp-content/plugins
+export NWTHEMES=$NWBLOG/wp-content/themes
+
 # Blog
-nwblog() {
+nwb() {
 	cd $NWBLOG
 }
 
 # Vagrant
-nwvag() {
+nwv() {
 	cd $NWVAGRANT
+}
+
+# Vagrant status
+nwvs() {
+	nwv && vagrant status
 }
 
 # Plugins
@@ -22,7 +34,7 @@ nwthemes() {
 	cd $NWTHEMES
 }
 
-alias nwvu="nwvag && sudo vagrant up"
-alias nwvh="nwvag && sudo vagrant halt"
-alias nwvs="nwvag && vagrant status"
+alias nwvu="nwv && vagrant up"
+alias nwvh="nwv && vagrant halt"
+alias nwvs="nwv && vagrant status"
 

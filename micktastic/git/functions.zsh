@@ -90,11 +90,18 @@ mkrepo() {
 	git push -u origin master
 }
 
+gbg() {
+	gb -a | grep $1
+}
+
+gcol() {
+	gco @{-$1}
+}
+
 delb() {
 	git branch -D $1
 	git push origin :$1
 }
-
 
 archiveBranch() {
 	if [ "$1" != "" ]; then
