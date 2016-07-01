@@ -98,11 +98,13 @@ gcol() {
 	gco @{-$1}
 }
 
+# Archive branch.
 delb() {
 	git branch -D $1
 	git push origin :$1
 }
 
+# Archive branch.
 archiveBranch() {
 	if [ "$1" != "" ]; then
 		git tag archive/$1 $1
