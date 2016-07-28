@@ -2,6 +2,9 @@
 # Define global variables
 #
 
+path+=("$HOME/bin")
+export PATH
+
 # Sites directory
 export SITES=~/Sites
 export DOTFILES=~/.dotfiles

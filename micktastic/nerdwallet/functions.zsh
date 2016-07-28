@@ -4,14 +4,24 @@
 
 export NWVAGRANT=~/dev-vagrant/vmware
 export NW=/srv/nerdwallet
+export NWWP=$NW/wp
 export NWSITE=$NW/app-site
 export NWBLOG=$NWSITE/blog
 export NWPLUGS=$NWBLOG/wp-content/plugins
 export NWTHEMES=$NWBLOG/wp-content/themes
 
+alias nwvu="nwv && vagrant up"
+alias nwvh="nwv && vagrant halt"
+alias nwvs="nwv && vagrant status"
+
 # Blog
 nwb() {
 	cd $NWBLOG
+}
+
+# WP Dev (should be symlinked from blog)
+nwp() {
+	cd $NWWP
 }
 
 # Vagrant
@@ -33,8 +43,3 @@ nwplugs() {
 nwthemes() {
 	cd $NWTHEMES
 }
-
-alias nwvu="nwv && vagrant up"
-alias nwvh="nwv && vagrant halt"
-alias nwvs="nwv && vagrant status"
-
