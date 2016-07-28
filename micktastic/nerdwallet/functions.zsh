@@ -12,7 +12,6 @@ export NWTHEMES=$NWBLOG/wp-content/themes
 
 alias nwvu="nwv && vagrant up"
 alias nwvh="nwv && vagrant halt"
-alias nwvs="nwv && vagrant status"
 
 # Blog
 nwb() {
