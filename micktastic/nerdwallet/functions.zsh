@@ -33,6 +33,11 @@ nwvs() {
 	nwv && vagrant status
 }
 
+# Vagrant status
+nwvssh() {
+	nwv && vagrant ssh
+}
+
 # Plugins
 nwplugs() {
 	cd $NWPLUGS
