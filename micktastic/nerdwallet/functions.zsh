@@ -9,6 +9,7 @@ export NWSITE=$NW/app-site
 export NWBLOG=$NWSITE/blog
 export NWPLUGS=$NWBLOG/wp-content/plugins
 export NWTHEMES=$NWBLOG/wp-content/themes
+export NWTHEME=nerdwallet
 
 alias nwvu="nwv && vagrant up"
 alias nwvh="nwv && vagrant halt"
@@ -46,4 +47,8 @@ nwplugs() {
 # Themes
 nwthemes() {
 	cd $NWTHEMES
+}
+
+nwtheme() {
+	cd $NWTHEMES/$NWTHEME
 }
