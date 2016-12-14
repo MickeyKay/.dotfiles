@@ -5,7 +5,7 @@
 export NWVAGRANT=~/dev-vagrant/vmware
 export NW=/srv/nerdwallet
 export NWWP=$NW/wp
-export NWSITE=$NW/app-site
+export NWAPPSITE=$NW/app-site
 export NWBLOG=$NWSITE/blog
 export NWPLUGS=$NWBLOG/wp-content/plugins
 export NWTHEMES=$NWBLOG/wp-content/themes
@@ -38,6 +38,11 @@ nwvs() {
 # Vagrant status
 nwvssh() {
 	nwv && vagrant ssh
+}
+
+# Appsite
+nwapp() {
+	cd $NWAPPSITE
 }
 
 # Plugins
