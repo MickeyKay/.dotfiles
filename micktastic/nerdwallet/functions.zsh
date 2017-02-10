@@ -5,13 +5,13 @@
 export NWVAGRANT=~/dev-vagrant/vmware
 export NW=/srv/nerdwallet
 export NWWP=$NW/wp
-export NWSITE=$NW/app-site
+export NWWORDPRESS=$NWWP/wordpress
 export NWAPPSITE=$NW/app-site
 export NWBLOG=$NWSITE/blog
-export NWPLUGS=$NWBLOG/wp-content/plugins
-export NWTHEMES=$NWBLOG/wp-content/themes
-export NWMU=$NWBLOG/wp-content/mu-plugins
-export NWTHEME=nerdwallet
+export NWPLUGS=$NWWORDPRESS/wp-content/plugins
+export NWTHEMES=$NWWORDPRESS/wp-content/themes
+export NWMU=$NWWORDPRESS/wp-content/mu-plugins
+export NWTHEME=$NWWORDPRESS/wp-content/themes/nerdwallet
 
 alias nwvu="nwv && vagrant up"
 alias nwvh="nwv && vagrant halt"
@@ -57,7 +57,7 @@ nwthemes() {
 }
 
 nwtheme() {
-	cd $NWTHEMES/$NWTHEME
+	cd $NWTHEME
 }
 
 # MU Plugins

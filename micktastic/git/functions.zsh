@@ -115,3 +115,8 @@ archiveBranch() {
 
 	git push origin --tags
 }
+
+# Close lingering SSH session.
+gsshstop() {
+	ssh -O stop git@github.com
+}
