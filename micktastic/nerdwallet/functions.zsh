@@ -15,6 +15,7 @@ export NWTHEME=$NWWORDPRESS/wp-content/themes/nerdwallet
 
 alias nwvu="nwv && vagrant up"
 alias nwvh="nwv && vagrant halt"
+alias wpu="nwvu && vagrant up"
 
 # Blog
 nwb() {
@@ -29,6 +30,10 @@ nwp() {
 # Vagrant
 nwv() {
 	cd $NWVAGRANT
+}
+
+nwvw() {
+	cd $NWVAGRANT/wordpress
 }
 
 # Vagrant status
