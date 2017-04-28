@@ -86,6 +86,6 @@ nw_ssh_regen_config() {
 	echo "\n\033[0;31mPlease close this tab and open a new one to ensure ~/.ssh/known_hosts is cleared."
 }
 
-nw_ssh_see_config() {
+nw_ssh_show_config() {
 	cat ~/.ssh/config
 }
