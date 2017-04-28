@@ -2,6 +2,10 @@
 # Perf
 #
 
+# Check the load timing profile of a URL.
+#
+# 	load_profile "https://url.com"
+#
 function load_profile {
   curl -o /dev/null -s -w "
     time_namelookup:  %{time_namelookup}
@@ -14,6 +18,10 @@ function load_profile {
          time_total:  %{time_total}\n" "$1"
 }
 
+# Check the average load time of a URL.
+#
+# 	load_time "https://url.com"
+#
 function load_time {
 
 	RUNS=10

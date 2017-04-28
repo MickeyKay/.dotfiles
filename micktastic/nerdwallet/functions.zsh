@@ -69,3 +69,23 @@ nwtheme() {
 nwmu() {
 	cd $NWMU
 }
+
+# Regenerate SSH config
+# @see https://nerdwallet.slack.com/archives/C1RC5U6SX/p1493333936310296
+nw_ssh_regen_config() {
+	cd ~/dev-vagrant
+	git pull origin master
+	cd nw-chef/docs/ssh
+	git pull origin master
+	python make_ssh_config_s3.py mkay
+	cp ~/.ssh/config ~/.ssh/config.bak
+	cp ./config ~/.ssh/config
+
+	rm ~/.ssh/known_hosts
+
+	echo "\n\033[0;31mPlease close this tab and open a new one to ensure ~/.ssh/known_hosts is cleared."
+}
+
+nw_ssh_see_config() {
+	cat ~/.ssh/config
+}
