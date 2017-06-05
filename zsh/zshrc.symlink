@@ -44,3 +44,5 @@ unset config_files
 
 eval "$(rbenv init -)"
 
+
+[ -s "/Users/mickey/.scm_breeze/scm_breeze.sh" ] && source "/Users/mickey/.scm_breeze/scm_breeze.sh"
