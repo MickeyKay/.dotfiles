@@ -3,6 +3,13 @@
 #
 
 #
+# Basic
+#
+alias vn="vagrant"
+alias vh="vagrant halt"
+alias vs="vagrant status"
+
+#
 # Varying Vagrant Vagrants
 #
 
@@ -28,7 +35,3 @@ vvvv() {
 	vag
 	cd wordpress-develop
 }
-
-alias vu="vag && sudo vagrant up"
-alias vh="vag && sudo vagrant halt"
-alias vs="vag && vagrant status"
