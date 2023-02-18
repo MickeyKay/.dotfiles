@@ -13,7 +13,7 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Set custom key repeat settings.
 defaults write -g InitialKeyRepeat -int 10
-defaults write NSGlobalDomain KeyRepeat -int 4
+defaults write NSGlobalDomain KeyRepeat -int 2
 
 # Use AirDrop over every interface. srsly this should be a default.
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
