@@ -38,3 +38,6 @@
 
 [init]
 	defaultBranch = main
+[user]
+	name = MickeyKay
+	email = mickeyskay@gmail.com
