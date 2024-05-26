@@ -1,9 +1,7 @@
 #!/usr/bin/ruby
 require 'irb/completion'
-require 'irb/ext/save-history'
 require 'rubygems'
 
-IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
@@ -31,8 +29,16 @@ class Object
   end
 end
 
+# Copies the result of the last operation you ran in IRB to the system
+# clipboard (if you're on macOS).
+def cop
+  last_value = IRB.CurrentContext.last_value
+  %x[echo '#{last_value}' | pbcopy]
+  "copied \`#{last_value}' to your clipboard"
+end
+
 def me
-  User.find_by_login(ENV['USER'].strip)
+  User.find_by_email(`git config --get user.email`.chomp)
 end
 
 def r
